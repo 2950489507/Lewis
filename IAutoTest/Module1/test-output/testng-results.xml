@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1547" started-at="2020-03-06T17:33:18Z" finished-at="2020-03-06T17:33:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1547" started-at="2020-03-06T17:33:18Z" finished-at="2020-03-06T17:33:19Z">
+      <class name="com.autotest.httpclient.HttpclientDemo">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.autotest.httpclient.HttpclientDemo@233c0b17]" name="test1" duration-ms="1518" started-at="2020-03-07T01:33:18Z" finished-at="2020-03-07T01:33:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- com.autotest.httpclient.HttpclientDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,29 @@
+[
+	{
+		"description":"post request with cookies and parameters!",
+		"request":
+			{
+				"uri":"/post/with/cookies",
+				"method":"post",
+				"cookies":
+					{
+						"key":"123456"
+					},
+				"json":
+					{
+						"name":"huhansan",
+						"age":"18"
+					}
+			},
+		"response":
+			{
+				"status":"300",
+				"json":
+					{
+						"status":"1",
+						"message":"success"
+					}
+			}
+			
+	}
+]
