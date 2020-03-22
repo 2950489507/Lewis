@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="3" name="Login">
+  	<groups>
+  		<run>
+  			<include name="group1"></include>
+  			<include name="group4"></include>
+  		</run>
+  	</groups>
+    <classes>
+      <class name="com.autotest.testng.suite.SuiteConfig"></class>
+      <class name="com.autotest.testng.suite.LoginTest"/>
+      <class name="com.autotest.testng.MethodOnGroup"></class>
+      <class name="com.autotest.testng.ClassOnGroup3"></class>
+      <class name="com.autotest.testng.ClassOnGroup4"></class>
+    </classes>
+  </test> <!-- Login -->
+  <test name="pay">
+  	<classes>
+  		<class name="com.autotest.testng.suite.SuiteConfig"></class>
+  		<class name="com.autotest.testng.suite.PayTest"></class>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
