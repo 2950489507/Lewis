@@ -24,14 +24,14 @@ public class MyCookiesForGet {
 	private CookieStore store;
 	@BeforeMethod
 	public void before() {
-		//获取配置文件中URL信息
+		//鑾峰彇閰嶇疆鏂囦欢涓璘RL淇℃伅
 		this.bundle=ResourceBundle.getBundle("AutotestConfig", Locale.CHINA);
 		this.url=bundle.getString("test.url");
 		
 	}
 	
-	@Test(dependsOnMethods={"getCookies"})//HttpClient模拟客户端发送请求并接收数据
-	    //从请求接口获取cookies.
+	@Test //HttpClient妯℃嫙瀹㈡埛绔彂閫佽姹傚苟鎺ユ敹鏁版嵁
+	//浠庤姹傛帴鍙ｈ幏鍙朿ookies.
 	public void getCookies() throws Exception {
 		
 		store = new BasicCookieStore();
@@ -53,7 +53,7 @@ public class MyCookiesForGet {
 		client.close();
 	}
 	
-	@Test//带cookies get 请求
+	@Test(dependsOnMethods={"getCookies"})//甯ookies get 璇锋眰
 	public void getWithCookies() throws Exception{
 		
 		HttpGet get = new HttpGet(url+bundle.getString("get.with.cookies.uri"));
@@ -63,12 +63,12 @@ public class MyCookiesForGet {
 			System.out.println(1);
 		}
 		if(response.getStatusLine().getStatusCode()==200){
-			System.out.println("带cookies请求成功!");
+			System.out.println("甯ookies璇锋眰鎴愬姛!");
 			String result = EntityUtils.toString(response.getEntity(),"utf-8");
 			System.out.println(result);
 		}
 		else {
-			System.out.println("带cookies请求失败!");
+			System.out.println("甯ookies璇锋眰澶辫触!");
 		}
 		
 		

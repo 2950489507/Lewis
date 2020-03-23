@@ -1,64 +1,52 @@
 package com.autotest.testng;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class TestNGDemo {
 
-	//Ö´ĞĞË³Ğò  Suite->Test->Class->Method
-	//Ò»¸ö²âÊÔÌ×¼şÖĞ°üº¬¶à¸ö²âÊÔÏîTest,Ò»¸öTestÖĞ¿ÉÒÔ°üº¬¶à¸öÀà£¬Ò»¸öÀàÖĞ¿ÉÒÔ°üº¬¶à¸ö²âÊÔ·½·¨
-	@Test //±»²âÊÔµÄ·½·¨
-	public void testCase1() {
-		System.out.println("This is TestCase1");
-	}
-	
-	@BeforeMethod //ÔÚ²âÊÔ·½·¨Ö´ĞĞÖ®Ç°Ö´ĞĞ
-	public void beforeMethod() {
-		System.out.println("Run before the Test Method Everytime!");
-	}
-	
-	@AfterMethod//ÔÚ²âÊÔ·½·¨Ö´ĞĞÖ®ºóÖ´ĞĞ
-	public void afterMethod() {
-		System.out.println("Run after the Test Method Everytime!");
-	}
-	
-	@BeforeClass //ÔÚ²âÊÔ·½·¨ËùÔÚÀàÖ´ĞĞÖ®Ç°Ö´ĞĞ
-	public void beforeClass() {
-		System.out.println("Run before the Class");
-	}
-	
-	@AfterClass //ÔÚ²âÊÔ·½·¨ËùÔÚÀàÖ´ĞĞÖ®ºóÖ´ĞĞ
-	public void afterClass() {
-		System.out.println("Run after the Class");
-	}
-	
-	@BeforeSuite //ÔÚ²âÊÔÌ×¼şÖ´ĞĞÖ®Ç°Ö´ĞĞ ÔÚÀàÖ®Ç°
-	public void beforeSuite() {
-		System.out.println("Run before the Suite");
-	}
-	
-	@AfterSuite //ÔÚ²âÊÔÌ×¼şÖ´ĞĞÖ®ºóÖ´ĞĞ
-	public void afterSuite() {
-		System.out.println("Run after the Suite");
-	}
-	
-	@BeforeTest //ÔÚÌ×¼şÖĞµÄÒ»¸ö²âÊÔÖ´ĞĞÖ®Ç°Ö´ĞĞ
-	public void beforeTest() {
-		System.out.println("run before test");
-	}
-	@AfterTest //ÔÚÌ×¼şÖĞµÄÒ»¸ö²âÊÔÖ´ĞĞÖ®ºóÖ´ĞĞ
-	public void afterTest() {
-		System.out.println("run after test");
-	}
+    //æ‰§è¡Œé¡ºåº  Suite->Test->Class->Method
+    //ä¸€ä¸ªæµ‹è¯•å¥—ä»¶ä¸­åŒ…å«å¤šä¸ªæµ‹è¯•é¡¹Test,ä¸€ä¸ªTestä¸­å¯ä»¥åŒ…å«å¤šä¸ªç±»ï¼Œä¸€ä¸ªç±»ä¸­å¯ä»¥åŒ…å«å¤šä¸ªæµ‹è¯•æ–¹æ³•
+    @Test //è¢«æµ‹è¯•çš„æ–¹æ³•
+    public void testCase1() {
+        System.out.println("This is TestCase1");
+    }
+    
+    @BeforeMethod //åœ¨æµ‹è¯•æ–¹æ³•æ‰§è¡Œä¹‹å‰æ‰§è¡Œï¼ˆæ¯ä¸ªæµ‹è¯•æ–¹æ³•æ‰§è¡Œå‰éƒ½ä¼šæ‰§è¡Œä¸€æ¬¡ï¼‰
+    public void beforeMethod() {
+        System.out.println("Run before the Test Method Everytime!");
+    }
+    
+    @AfterMethod//åœ¨æµ‹è¯•æ–¹æ³•æ‰§è¡Œä¹‹åæ‰§è¡Œ(æ¯ä¸ªæµ‹è¯•æ–¹æ³•æ‰§è¡Œåéƒ½ä¼šæ‰§è¡Œä¸€æ¬¡)
+    public void afterMethod() {
+        System.out.println("Run after the Test Method Everytime!");
+    }
+    
+    @BeforeClass //åœ¨æµ‹è¯•æ–¹æ³•æ‰€åœ¨ç±»æ‰§è¡Œä¹‹å‰æ‰§è¡Œ 
+    public void beforeClass() {
+        System.out.println("Run before the Class");
+    }
+    
+    @AfterClass //åœ¨æµ‹è¯•æ–¹æ³•æ‰€åœ¨ç±»æ‰§è¡Œä¹‹åæ‰§è¡Œ
+    public void afterClass() {
+        System.out.println("Run after the Class");
+    }
+    
+    @BeforeSuite //åœ¨æµ‹è¯•å¥—ä»¶æ‰§è¡Œä¹‹å‰æ‰§è¡Œ ï¼ˆåœ¨ç±»ä¹‹å‰ï¼‰
+    public void beforeSuite() {
+        System.out.println("Run before the Suite");
+    }
+    
+    @AfterSuite //åœ¨æµ‹è¯•å¥—ä»¶æ‰§è¡Œä¹‹åæ‰§è¡Œ
+    public void afterSuite() {
+        System.out.println("Run after the Suite");
+    }
+    
+    @BeforeTest //åœ¨å¥—ä»¶ä¸­çš„ä¸€ä¸ªæµ‹è¯•æ‰§è¡Œä¹‹å‰æ‰§è¡Œ
+    public void beforeTest() {
+        System.out.println("run before test");
+    }
+    @AfterTest //åœ¨å¥—ä»¶ä¸­çš„ä¸€ä¸ªæµ‹è¯•æ‰§è¡Œä¹‹åæ‰§è¡Œ
+    public void afterTest() {
+        System.out.println("run after test");
+    }
 }
-

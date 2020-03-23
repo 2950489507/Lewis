@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 
 public class MethodOnGroup {
 	
-	@BeforeGroups(groups = "group1")//ËùÔÚ×é·½·¨ÔËĞĞÖ®Ç°ÔËĞĞ
+	@BeforeGroups(groups = "group1")//æ‰€åœ¨ç»„æ–¹æ³•è¿è¡Œä¹‹å‰è¿è¡Œ
 	public void beforeGroup() {
 		System.out.println("run before group1");
 	}
-	@AfterGroups(groups = "group1")//ËùÔÚ×éËùÓĞ·½·¨ÔËĞĞÖ®ºóÇ°ÔËĞĞ
+	@AfterGroups(groups = "group1")//æ‰€åœ¨ç»„æ‰€æœ‰æ–¹æ³•è¿è¡Œä¹‹åè¿è¡Œ
 	public void afterGroup() {
 		System.out.println("run after group1");
 	}

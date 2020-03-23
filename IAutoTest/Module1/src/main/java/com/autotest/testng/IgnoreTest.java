@@ -9,7 +9,7 @@ public class IgnoreTest {
 		System.out.println("test1 running");
 	}
 	
-	@Test(enabled = false)  //ºöÂÔ²âÊÔ ÉèÖÃenabled = false£¬Ôò²»»áÖ´ĞĞ
+	@Test(enabled = false)  //è®¾ç½®falseä¸ä¼šæ‰§è¡Œ
 	public void test2() {
 		System.out.println("test2 running");
 	}
