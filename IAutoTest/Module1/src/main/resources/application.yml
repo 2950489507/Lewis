@@ -1,0 +1,21 @@
+server:
+   port: 8080
+   
+logging: 
+   path: logs
+   file: mylog.log
+
+spring: 
+   application: 
+      name: mytest
+   datasource: 
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://85.10.205.173:3306/formybatis
+      username: neversaygoodbye
+      password: lw+love=520
+
+mybatis: 
+   type-aliases-package: com.autotest.model
+   mapper-locations:
+      - mapper/*.xml
+   
