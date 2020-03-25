@@ -17,5 +17,5 @@ spring:
 mybatis: 
    type-aliases-package: com.autotest.model
    mapper-locations:
-      - mapper/*.xml
+      - mapper/mysql.xml
    

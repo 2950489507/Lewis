@@ -1,12 +1,12 @@
-package com.autotest.bean;
+package com.autotest.model;
 
 import lombok.Data;
 
 @Data
-public class User {
+public class GetUserListCase {
+
 	private String username;
-	private String password;
-	private String name;
 	private String age;
 	private String sex;
+	private String expected; 
 }

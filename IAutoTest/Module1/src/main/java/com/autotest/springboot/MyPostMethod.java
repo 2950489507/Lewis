@@ -1,6 +1,5 @@
 package com.autotest.springboot;
 
-import javax.management.loading.PrivateClassLoader;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,11 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.autotest.bean.User;
+import com.autotest.model.User;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.models.HttpMethod;
 
 @RestController
 @Api(value = "/",tags = "这是我的全部POST方法")
@@ -44,10 +42,10 @@ public class MyPostMethod {
 		User user=null;
 		for(Cookie cookie:cookies) {
 			if(cookie.getName().equals("login")&&cookie.getValue().equals("true")&&
-					u.getUsername().equals("zhangsan")&&u.getPassword().equals("123")) {
+					u.getUsername().equals("zhangsan")&&u.getAge().equals("12")) {
 				user=new User();
 				user.setAge("12");
-				user.setName("david");
+				user.setUsername("david");
 				user.setSex("male");
 				return user.toString();
 			}
