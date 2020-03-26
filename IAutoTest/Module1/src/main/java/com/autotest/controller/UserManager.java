@@ -41,7 +41,7 @@ public class UserManager {
 	public boolean  addUser(HttpServletRequest request,@RequestBody User user) {
 		Boolean x = verifyCookies(request);
 		int result=0;
-		   if(x!=null){
+		   if(x==true){
 	            result = template.insert("addUser",user);
 	        }
 	        if(result > 0){

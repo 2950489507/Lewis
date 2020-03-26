@@ -1,9 +1,12 @@
 package com.autotest.cases;
 
 import java.io.IOException;
+import java.util.List;
 
+import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -41,7 +44,9 @@ public class LoginTest {
 	        // 发送请求
 	        String result = getResult(loginCase);
 	        // 验证结果
+	        System.out.println(TestConfig.store);
 	        Assert.assertEquals(loginCase.getExpected(),result);
+	        
 	    }
 	 
 	  @Test(groups = "loginFalse", description = "用户登录失败接口测试")
@@ -54,7 +59,9 @@ public class LoginTest {
 	        // 发送请求
 	        String result = getResult(loginCase);
 	        // 验证结果
+	       
 	        Assert.assertEquals(loginCase.getExpected(),result);
+	        
 	    }
 	  
 	  private String getResult(LoginCase loginCase) throws IOException {
@@ -69,10 +76,11 @@ public class LoginTest {
 	        
 	        String result;
 	        
-	        CloseableHttpResponse response = TestConfig.httpclient.execute(post);
+	        HttpResponse response = TestConfig.httpclient.execute(post);
 
 	        result = EntityUtils.toString(response.getEntity(),"utf-8");
-	        System.out.println(TestConfig.store);
+	        //List<Cookie> cookies = TestConfig.store.getCookies();
+			
 	        return result;
 	    }
 

@@ -9,6 +9,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONObject;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,19 +19,20 @@ import com.autotest.model.AddUserCase;
 import com.autotest.model.User;
 import com.autotest.utils.DatabaseUtil;
 
-public class addUserTest {
+public class AddUserTest {
 
 	@Test(dependsOnGroups = "loginTrue",description = "添加用户接口测试")
-	public void addUser() throws IOException, InterruptedException {
+	public void addUser() throws IOException, InterruptedException{
 		SqlSession session= DatabaseUtil.getSqlSession();
 		AddUserCase addUserCase = session.selectOne("addUserCase", 1);
 		System.out.println(addUserCase.toString());
 		System.out.println(TestConfig.addUserUrl);
 		String result = getResult(addUserCase);
-		Thread.sleep(30000);
-		User user =session.selectOne("addUser",addUserCase);
-		Thread.sleep(10000);
-		System.out.println(user.toString());
+			
+		//刚插入的数据在同一个数据库链接中无法查询出来。新建一个连接
+		//User user =DatabaseUtil.getSqlSession().selectOne("addUser",addUserCase);
+		
+		//System.out.println(user.toString());
 		Assert.assertEquals(result, addUserCase.getExpected());
 		
 	}
@@ -55,6 +58,6 @@ public class addUserTest {
 		String result = EntityUtils.toString(response.getEntity(),"utf-8");
 		System.out.println(result);
 		return result;
-		
+
 	}
 }

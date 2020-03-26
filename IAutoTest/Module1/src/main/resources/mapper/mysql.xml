@@ -17,8 +17,8 @@
     <update id="updateUserInfo" parameterType="com.autotest.model.User">
         update user
         <trim prefix="SET" suffixOverrides=",">
-            <if test="null != userName and '' != userName">
-                userName = #{userName},
+            <if test="null != username and '' != username">
+                username = #{username},
             </if>
             <if test="null != sex and '' != sex">
                 sex = #{sex},
@@ -42,8 +42,8 @@
             <if test="null != id and '' != id">
                 AND id=#{id}
             </if>
-            <if test="null != userName and '' != userName">
-                AND userName=#{userName}
+            <if test="null != username and '' != username">
+                AND username=#{username}
             </if>
             <if test="null != password and '' != password">
                 AND password=#{password}

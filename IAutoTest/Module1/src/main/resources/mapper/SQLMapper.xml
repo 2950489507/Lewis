@@ -31,7 +31,7 @@
     <!--添加用户信息-->
     <select id="addUser" parameterType="com.autotest.model.AddUserCase" resultType="com.autotest.model.User">
         select * from user where
-        username = #{username}
+        username=#{username}
         and password=#{password}
         and sex=#{sex}
         and age=#{age}
