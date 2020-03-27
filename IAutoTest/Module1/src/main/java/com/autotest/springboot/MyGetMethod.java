@@ -14,10 +14,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
+@Api(value = "/",tags ="这是我的全部GET方法")
 public class MyGetMethod {
 
 	@RequestMapping(value = "/getcookies",method = RequestMethod.GET)
+	@ApiOperation(value = "通过这个方法可以获取到cookies",httpMethod = "GET")
 	public String getCookies(HttpServletResponse response) {
 		
 		Cookie cookie = new Cookie("login", "true");
@@ -26,6 +31,7 @@ public class MyGetMethod {
 	}
 	
 	@RequestMapping(value = "/get/with/cookies",method=RequestMethod.GET)
+	@ApiOperation(value = "要携带cookies才能访问",httpMethod = "GET")
 	public String getWithCookies(HttpServletRequest request) {
 		
 		Cookie[] cookies = request.getCookies();
@@ -42,6 +48,7 @@ public class MyGetMethod {
 	
 	//需要携带参数访问的第一种实现方法
 	@RequestMapping(value = "/get/with/para",method = RequestMethod.GET)
+	@ApiOperation(value = "带参数get方法1",httpMethod = "GET")
 	public Map<String, Integer> getMyList(@RequestParam Integer start,@RequestParam Integer end){
 		
 		Map<String, Integer> mylist = new HashMap<String, Integer>();
@@ -53,6 +60,7 @@ public class MyGetMethod {
 	
 	//需要携带参数访问的第二种实现方法
 	@RequestMapping(value = "/get/with/para/{start}/{end}",method = RequestMethod.GET)
+	@ApiOperation(value = "带参数get方法2",httpMethod = "GET")
 	public Map<String, Integer> getList(@PathVariable Integer start,@PathVariable Integer end){
 		
 		Map<String, Integer> mylist = new HashMap<String, Integer>();

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="用户表接口测试套件">
+	<test name="用户表接口测试用例">
+	
+		<classes>
+			<class name="com.autotest.cases.LoginTest"></class>
+			<class name="com.autotest.cases.AddUserTest"></class>
+			<class name="com.autotest.cases.GetUserInfoTest"></class>
+			<class name="com.autotest.cases.GetUserListTest"></class>
+			<class name="com.autotest.cases.UpdateUserInfoTest"></class>
+		</classes>
+	</test>
+	<listeners>
+	<listener class-name="com.autotest.extentreport.ExtentTestNGIReporterListener"></listener>
+	</listeners>
+</suite>
