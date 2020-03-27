@@ -45,7 +45,8 @@ public class LoginTest {
 	        String result = getResult(loginCase);
 	        // 验证结果
 	        System.out.println(TestConfig.store);
-	        Assert.assertEquals(loginCase.getExpected(),result);
+	        session.close();
+	        Assert.assertEquals(result,loginCase.getExpected());
 	        
 	    }
 	 
@@ -59,7 +60,7 @@ public class LoginTest {
 	        // 发送请求
 	        String result = getResult(loginCase);
 	        // 验证结果
-	       
+	        session.close();
 	        Assert.assertEquals(loginCase.getExpected(),result);
 	        
 	    }

@@ -40,6 +40,7 @@ public class GetUserInfoTest {
 		JSONArray jsonArray1=new JSONArray(resultJson.getString(0));
 		System.out.println(jsonArray.toString());
 		System.out.println(jsonArray1.toString());
+		session.close();
 		Assert.assertEquals(jsonArray.toString(),jsonArray1.toString());
 		
 	}

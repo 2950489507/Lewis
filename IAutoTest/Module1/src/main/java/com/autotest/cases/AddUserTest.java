@@ -33,6 +33,7 @@ public class AddUserTest {
 		//User user =DatabaseUtil.getSqlSession().selectOne("addUser",addUserCase);
 		
 		//System.out.println(user.toString());
+		session.close();
 		Assert.assertEquals(result, addUserCase.getExpected());
 		
 	}

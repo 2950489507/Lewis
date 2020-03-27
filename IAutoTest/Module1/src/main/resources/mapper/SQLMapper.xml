@@ -81,6 +81,6 @@
                 AND isDelete=#{isDelete}
             </if>
         </trim>
-        and id = #(userId)
+        and id = #{userId}
     </select>
 </mapper>
