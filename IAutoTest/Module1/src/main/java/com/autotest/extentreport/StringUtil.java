@@ -12,9 +12,9 @@ public class StringUtil {
 	
 	/**
 	 * 
-	 * @param sourceStr ´ýÌæ»»×Ö·û´®
-	 * @param matchStr  Æ¥Åä×Ö·û´®
-	 * @param replaceStr  Ä¿±êÌæ»»×Ö·û´®
+	 * @param sourceStr 
+	 * @param matchStr  
+	 * @param replaceStr  
 	 * @return
 	 */
 	public static String replaceFirst(String sourceStr,String matchStr,String replaceStr){

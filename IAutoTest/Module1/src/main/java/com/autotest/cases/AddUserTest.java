@@ -28,7 +28,6 @@ public class AddUserTest {
 		System.out.println(addUserCase.toString());
 		System.out.println(TestConfig.addUserUrl);
 		String result = getResult(addUserCase);
-			
 		//刚插入的数据在同一个数据库链接中无法查询出来。新建一个连接
 		//User user =DatabaseUtil.getSqlSession().selectOne("addUser",addUserCase);
 		

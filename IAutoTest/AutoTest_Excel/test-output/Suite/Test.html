@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 30 23:43:57 CST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2589 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='apitest.APITest.run()'><b>run</b><br>Test class: apitest.APITest<br>Test method: 测试<br>Parameters: CaseModel [caseName=用户登陆接口, stepModels=[StepModel [step=用户登陆, url=http://localhost:8080/user/login, action=post
+, value={param:{'username':'lewis','password':'123'}}, expect=true]
+]]
+</td>
+<td></td>
+<td>0</td>
+<td>apitest.APITest@65b3f4a4</td></tr>
+<tr>
+<td title='apitest.APITest.run()'><b>run</b><br>Test class: apitest.APITest<br>Test method: 测试<br>Parameters: CaseModel [caseName=查询用户数接口, stepModels=[StepModel [step=查询用户数量, url=http://localhost:8080/user/getusercount, action=get
+, value=null, expect=8]
+]]
+</td>
+<td></td>
+<td>0</td>
+<td>apitest.APITest@65b3f4a4</td></tr>
+<tr>
+<td title='apitest.APITest.run()'><b>run</b><br>Test class: apitest.APITest<br>Test method: 测试<br>Parameters: CaseModel [caseName=获取用户信息, stepModels=[StepModel [step=获取用户信息, url=http://localhost:8080/user/getUserInfo, action=post
+, value={param:{'id':'1'},header:{'cookie':'login=true'}}, expect=[{"id":1,"username":"lewis","password":"123","sex":"0","age":"33","permission":"1","isDelete":"0"}]]
+]]
+</td>
+<td></td>
+<td>0</td>
+<td>apitest.APITest@65b3f4a4</td></tr>
+<tr>
+<td title='apitest.APITest.run()'><b>run</b><br>Test class: apitest.APITest<br>Test method: 测试<br>Parameters: CaseModel [caseName=用户登陆接口, stepModels=[StepModel [step=用户登陆, url=http://localhost:8080/user/login, action=post
+, value={param:{'username':'lewis','password':'123'}}, expect=true]
+]]
+</td>
+<td></td>
+<td>0</td>
+<td>apitest.APITest@f2ff811</td></tr>
+<tr>
+<td title='apitest.APITest.run()'><b>run</b><br>Test class: apitest.APITest<br>Test method: 测试<br>Parameters: CaseModel [caseName=查询用户数接口, stepModels=[StepModel [step=查询用户数量, url=http://localhost:8080/user/getusercount, action=get
+, value=null, expect=8]
+]]
+</td>
+<td></td>
+<td>0</td>
+<td>apitest.APITest@f2ff811</td></tr>
+</table><p>
+</body>
+</html>
